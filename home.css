@@ -1,0 +1,756 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+body {
+
+    font-family:"Plus Jakarta Sans-Regular", Helvetica ;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+  font-family: "Raleway";
+  box-sizing: border-box;
+}
+
+.top-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background: #1e1e1e ;
+  color: #FFF;
+  width: 100%;
+  height: 111px;
+}
+
+.menu-button-container {
+  display: none;
+  height: 100%;
+  width: 60px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color:#eb7520;
+  position: absolute;
+  height: 6px;
+  margin-right: 40px;
+  width: 50px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+
+
+.menu{
+  justify-content:center;
+}
+
+
+.menu ul {
+ 
+ list-style-type: none;
+ margin: 0;
+ padding: 0; 
+}
+
+.menu > li {
+ display: inline;
+ margin-right: 90px;
+ overflow: hidden;
+
+
+}
+
+.menu a {
+ color: #fff;
+ font-size: 20px;
+ text-decoration: none;
+}
+
+.menu :hover {
+border-bottom: 2px solid red;
+}
+
+
+#logo {
+  max-width: 100px; 
+}
+
+.logo {
+  max-width: 100px;
+  justify-content:left;
+}
+
+.menu-button::before {
+  content: '';
+  margin-top: -8px;
+}
+
+.menu-button::after {
+  content: '';
+  margin-top: 8px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+  background: rgba(255, 255, 255, 0);
+  z-index: 1000;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
+
+@media (max-width: 700px) {
+  .menu-button-container {
+    display: flex;
+    
+  }
+  .menu {
+    position: absolute;
+    top: 25px;
+    margin-top: 50px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    margin-left: 45px;
+    padding-top: 10px;
+    
+  }
+  #menu-toggle ~ .menu li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 400ms cubic-bezier(0.23, 0, 0.32, 1);
+  }
+  #menu-toggle:checked ~ .menu li {
+    border: 1px solid #333;
+    height: 2.5em;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .menu > li {
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+    padding: 0.5em 0;
+    width: 80%;
+    color: white;
+    z-index: 1000;
+    background-color: #222;
+  }
+  .menu > li:not(:last-child) {
+    border-bottom: 1px solid #444;
+    z-index: 1000;
+  }
+}
+
+
+
+.main-font{
+    width: 100%;
+    height: 710px;
+    background-image: url(https://cdn.jdpower.com/What%20Is%20A%20JDM%20Car.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.about{
+    background: black linear-gradient(rgb(8, 8, 8),rgb(43, 38, 38));
+    width: 514px;
+    height: 340px;
+    margin: 80px;
+    margin-top: 90px;
+    border-radius: 10px;
+    opacity: 0.8;
+    float: left; 
+}
+
+form{
+    float: right;
+    bottom: 560px;
+}
+
+.head{
+ margin-top: 9px;
+ margin-left: 31px;
+ color: #eb7520;
+ font-weight:900;
+ font: bold;
+ font-size: 45px;
+ text-align: left; 
+
+}
+
+.sub{
+    margin-left: 14px;
+    color: #ffffff;
+    font-weight: 700;
+    font:bold;
+    font-size: 20px;
+    text-align: left; 
+    margin-top: 0%;
+}
+
+.sub-1{
+    margin-left: 14px;
+    color: #ffffff; 
+    text-align: left;  
+}
+
+.button-1 {
+    display:flex;
+    width: 133px;
+    height: 42px;
+    color:black;
+    margin-left: 33px;
+    margin-bottom: 39px;
+    background-color:#eb7520 ;
+    border-radius: 9px; 
+    padding: 10px;  
+    
+}
+
+.button-1 a{
+    text-align: center;
+    margin-left: 15px;
+}
+
+.button-1  :hover {
+    color: #ffffff;
+    border-bottom: 4px solid #ff9040;
+}
+
+
+form{
+    
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    background-color: #F3F3F3;
+    padding: 30px;
+    margin-right: 88px;
+    margin-top: 60px;
+    border-radius: 15px;
+
+}
+
+.yes{
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    width: max-content;
+    padding: 57px;
+    background: #ffffff;
+    width:443px ;
+    height: 536px;
+}
+
+.top{
+    color:black;
+    font: bold;
+    margin-top: 0px;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.name-2{
+    font: bolder;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.destination-2{
+    font: bolder;
+    font-weight: 900;
+    font-size: 20px;
+}
+.number-2{
+    font: bolder;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+
+label {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 5px;
+  }
+  
+
+  
+  input[type="text"]{
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 30px;
+    background-color:#D9D9D9;
+    border: 1px solid rgb(197, 190, 190);
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+
+.button {
+    margin-left: 120px;
+    text-decoration: none;
+    background-color: #E3843F;
+    color: #fff;
+    font: bold;
+    font-weight: 900;
+    font-size: 20px;
+    border-radius: 10px;
+    transition: 0.3s ease;
+    margin-top: 0%;
+    text-align: center;
+    width: 130px;
+    height: 50px;
+    border-radius: 9px; 
+    padding: 10px;  
+}
+
+.button:hover {
+    background-color: #ef6604;
+}
+
+
+
+/* Media queries for smaller screens */
+@media (max-width: 468px) {
+    .main-font {
+        width: 100%;
+        background-position: center;
+        height: 941px;
+    }
+
+    .about {
+        width: auto;
+        height: 290px;
+        margin: 20px;
+        margin-top: 10px;
+    }
+
+    form {
+        width: 100px;
+        margin-right: 50px;
+        margin-top: 40px;
+    }
+
+    .head {
+        font-size: 30px;
+    }
+
+    .sub {
+        font-size: 16px;
+    }
+
+    .sub-1 {
+        font-size: 14px;
+    }
+
+    .button-1 {
+     display: none;
+    }
+
+    .button-1 a {
+       font-size: 0px;
+    }
+
+    .yes {
+        padding: 20px;
+        width: 80%;
+        height:450px;
+    }
+
+    .top {
+        font-size: 24px;
+    }
+
+    .name-2,
+    .destination-2,
+    .number-2 {
+        font-size: 16px;
+    }
+
+    input[type="text"] {
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+
+    .button {
+        margin-left: 160px;
+        width: 290px;
+        height: 100px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .head {
+        font-size: 24px;
+    }
+
+    .sub {
+        font-size: 14px;
+    }
+
+    .button-1 {
+        width: 0px;;
+    }
+
+    .button-1 a {
+        font-size: 0px;
+    }
+
+    .yes {
+        padding: 20px;
+    }
+
+    .top {
+        font-size: 20px;
+    }
+
+    .name-2,
+    .destination-2,
+    .number-2 {
+        font-size: 14px;
+    }
+
+    input[type="text"] {
+        padding: 8px;
+        margin-bottom: 15px;
+    }
+
+    .button {
+        margin-left: 120px;
+        width: 150px;
+        height: 105px;
+        font-size: 14px;
+    }
+}
+
+
+
+
+/*benifits*/
+
+.benifits{
+    text-align: center;
+    font-size: 2.5rem;
+
+}
+
+.benifits .span  {
+    text-align: center;
+    color:black;
+    font: bolder;
+    font-weight: bolder;
+}
+
+.benifits .title{
+    text-align: center;
+    color:  #E3843F;
+    font: bolder;
+    font-weight: bolder;
+}
+
+@media (max-width: 768px) {
+    .benifits {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .benifits {
+        font-size: 2rem;
+    }
+}
+
+
+#benifits-card {
+    padding:0px;
+}
+
+.benifits-card{
+    display: grid;
+    align-items: center; 
+    grid-template-columns: 0.5fr 0.5fr 0.5fr;
+    gap:30px;
+    padding: 80px;
+    
+}
+
+.benifits-table {
+    justify-content: center;
+    align-items: center; 
+    gap: 1em;
+    padding-bottom: 74px;
+}
+
+.benifits-box {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1)  
+}
+
+.benifits-img img {
+    width: 100%;
+    height:280px;
+    padding: 30px;
+}
+
+
+.benifits-heading {
+    font-size: 1.4rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+ p {
+    color: #666;
+    text-align:center;
+    padding: 20px;
+}
+
+
+@media (max-width: 768px) {
+    #benifits-card{
+        padding-right: 0px;
+    }
+    .benifits-card {
+        grid-template-columns: 1fr;
+        width: 100%;
+        padding: 20px;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .benifits-heading {
+        font-size: 2rem;
+    }
+
+    .benifits-img img {
+        height: 200px;
+        padding: 20px;
+    }
+}
+
+
+/*review*/
+
+.comments{
+    text-align: center;
+    font-size: 2.5rem;
+
+}
+
+.comments .span  {
+    text-align: center;
+    color:black;
+    font: bolder;
+    font-weight: bolder;
+}
+
+.comments .title{
+    text-align: center;
+    color:  #E3843F;
+    font: bolder;
+    font-weight: bolder;
+}
+
+@media (max-width: 768px) {
+    .comments {
+        font-size: 3rem;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .comments {
+        font-size: 2.5rem;
+    }
+}
+
+/*review-card*/
+
+.review-cards{
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 0.5fr;
+    padding: 60px;     
+}
+
+.review-card {
+    max-width: 28rem;
+    min-height: 20px;
+    margin-left: 0;
+    margin-right: 1.25rem;
+    scroll-padding-top: 1rem;
+    scroll-padding-bottom: 1rem;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+    scroll-margin-top: 5rem;
+    scroll-margin-bottom: 5rem;
+}  
+
+.review-img-1{
+    display: flex;
+    justify-content:right;
+    justify-self: end;
+    scroll-margin-top: 4rem;
+    border-radius: 0.69cm;
+    padding-right:40px ;
+}
+
+.review-img-1 img {
+    width: 4.9rem;
+    height: 4.9rem;
+    border-radius: 1.69cm;
+    object-fit: cover;
+    border-width: 2px;
+    border-color: #E3843F;
+ }
+
+.review-heading{
+    font-weight: 600;
+    font-size: 1.875rem; 
+    line-height: 1.25rem; 
+    text-align: left;
+    padding-left: 20px;
+}
+
+.costumer{
+    text-align: right;
+    padding: 30px;
+}
+
+@media (max-width: 768px) {
+    .review-cards {
+        grid-template-columns: 1fr;
+        padding: 40px;
+    }
+    
+    .review-card {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    .review-heading {
+        font-size: 1.5rem;
+    }
+    
+    .review-img-1 {
+        justify-content: right;
+    }
+
+    
+    .costumer {
+        font-size: 0px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .review-card {
+        max-width: 100%;
+    }
+    
+    .review-heading {
+        font-size: 1.25rem;
+    }
+}
+
+
+/*question*/
+.any-question {
+    padding: 130px;
+    height: 396px;
+    width: 100%;
+    background-image: linear-gradient(
+        
+        rgba(0, 0, 0, 0.509),
+        rgba(0, 0, 0, 0.849)
+      ),
+      url(https://static.vecteezy.com/system/resources/thumbnails/025/475/400/small_2x/two-people-giving-handshakes-over-car-keys-ai-generated-photo.jpeg);
+    background-size: cover;
+    background-position: top;
+    background-position: center;
+  }
+
+.question{
+    font-family:"Plus Jakarta Sans-Regular", Helvetica ;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    font: bold;
+    color: #ffffff;
+}
+
+.question-text{
+    font-family:"Plus Jakarta Sans-Regular", Helvetica ;
+     display: flex;
+     justify-content: center;
+     margin: 1rem;
+}
+
+.question-text p{
+    color: #ffffff;
+    text-align: center;
+    font-size: 1rem; 
+    line-height: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .any-question {
+        padding: 80px;
+        height: auto;
+    }
+
+    .question {
+        font-size: 2rem;
+    }
+
+    .question-text p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .any-question {
+        padding: 20px;
+    }
+
+    .question {
+        font-size: 1rem;
+    }
+
+    .question-text p {
+        font-size: 0.8rem;
+    }
+}
+
